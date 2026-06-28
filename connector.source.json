@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "extensionId": "irodori.oracle",
+  "visibility": "public",
+  "version": "0.1.0",
+  "connector": {
+    "id": "oracle.connector",
+    "engine": "oracle",
+    "label": "Oracle",
+    "aliases": [
+      "oracle",
+      "Oracle"
+    ],
+    "defaultPort": 1521,
+    "wire": "oracle",
+    "module": "oracle.driver",
+    "features": [
+      "metadata",
+      "sql",
+      "streaming",
+      "explain"
+    ]
+  },
+  "connection": {
+    "endpoint": {
+      "modes": [
+        "hostPort",
+        "connectionString"
+      ],
+      "defaultPort": 1521,
+      "fields": [
+        {
+          "id": "host",
+          "label": "Host",
+          "type": "string",
+          "profileField": "host",
+          "required": true
+        },
+        {
+          "id": "port",
+          "label": "Port",
+          "type": "number",
+          "profileField": "port",
+          "default": 1521
+        },
+        {
+          "id": "database",
+          "label": "Database",
+          "type": "string",
+          "profileField": "database"
+        }
+      ]
+    },
+    "authMethods": [
+      "none",
+      "connectionString",
+      "userPassword",
+      "oracleWallet",
+      "kerberos",
+      "cloudIamToken",
+      "customDriverOptions"
+    ],
+    "tls": "optional",
+    "transports": "default",
+    "optionNamespaces": [
+      "oracle"
+    ],
+    "customDriverOptions": true
+  },
+  "runtime": {
+    "driverLinked": false
+  },
+  "source": {
+    "knowledgeEngineStatus": "verified",
+    "adapter": "db/oracle.rs"
+  }
+}
