@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "visibility": "public",
+  "extensionId": "irodori.oracle",
+  "connector": {
+    "id": "oracle.connector",
+    "engine": "oracle",
+    "label": "Oracle",
+    "aliases": [
+      "oracle",
+      "Oracle"
+    ],
+    "defaultPort": 1521,
+    "wire": "oracle",
+    "module": "oracle.driver",
+    "features": [
+      "metadata",
+      "sql",
+      "streaming",
+      "explain"
+    ]
+  },
+  "runtime": {
+    "abi": "irodori.connector.native.v1",
+    "module": {
+      "id": "oracle.driver",
+      "path": "dist/native",
+      "platforms": [
+        "windowsX64",
+        "windowsArm64",
+        "macosX64",
+        "macosArm64",
+        "linuxX64",
+        "linuxArm64"
+      ]
+    },
+    "crate": "irodori_extension_oracle",
+    "entrypoints": [
+      "irodori_extension_abi_version",
+      "irodori_connector_engine_json",
+      "irodori_extension_manifest_json",
+      "irodori_connector_config_json",
+      "irodori_connector_call_json",
+      "irodori_connector_free_buffer"
+    ],
+    "supportedCalls": [
+      "health",
+      "describe",
+      "manifest",
+      "config"
+    ],
+    "driverLinked": false
+  },
+  "source": {
+    "marketplaceId": "irodori.oracle",
+    "repository": "https://github.com/hjosugi/irodori-extension-oracle",
+    "knowledgeEngineStatus": "verified",
+    "adapter": "db/oracle.rs",
+    "adapterSha256": "fa986acea3255b1bafb25edbe7f0d065c96fe211fc2ee20d5da8e4e832cbea98"
+  }
+}
