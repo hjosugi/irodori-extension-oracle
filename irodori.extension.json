@@ -3,7 +3,7 @@
   "manifestVersion": 1,
   "id": "irodori.oracle",
   "name": "Oracle Connector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "irodori",
   "description": "Oracle Connector contributes the Oracle database connector through the native connector ABI.",
   "license": "MIT OR 0BSD",
@@ -246,6 +246,55 @@
                 {
                   "id": "token",
                   "label": "Token",
+                  "type": "secret",
+                  "secretPurpose": "token"
+                }
+              ]
+            },
+            {
+              "id": "accessToken",
+              "label": "Access token",
+              "kind": "token",
+              "secretPurposes": [
+                "token"
+              ],
+              "fields": [
+                {
+                  "id": "token",
+                  "label": "Token",
+                  "type": "secret",
+                  "secretPurpose": "token"
+                }
+              ]
+            },
+            {
+              "id": "oauth2",
+              "label": "OAuth 2.0",
+              "kind": "oauth2",
+              "secretPurposes": [
+                "token"
+              ],
+              "fields": [
+                {
+                  "id": "accessToken",
+                  "label": "Access token",
+                  "type": "secret",
+                  "secretPurpose": "token"
+                },
+                {
+                  "id": "refreshToken",
+                  "label": "Refresh token",
+                  "type": "secret",
+                  "secretPurpose": "token"
+                },
+                {
+                  "id": "clientId",
+                  "label": "Client ID",
+                  "type": "string"
+                },
+                {
+                  "id": "clientSecret",
+                  "label": "Client secret",
                   "type": "secret",
                   "secretPurpose": "token"
                 }

@@ -233,6 +233,55 @@
           ]
         },
         {
+          "id": "accessToken",
+          "label": "Access token",
+          "kind": "token",
+          "secretPurposes": [
+            "token"
+          ],
+          "fields": [
+            {
+              "id": "token",
+              "label": "Token",
+              "type": "secret",
+              "secretPurpose": "token"
+            }
+          ]
+        },
+        {
+          "id": "oauth2",
+          "label": "OAuth 2.0",
+          "kind": "oauth2",
+          "secretPurposes": [
+            "token"
+          ],
+          "fields": [
+            {
+              "id": "accessToken",
+              "label": "Access token",
+              "type": "secret",
+              "secretPurpose": "token"
+            },
+            {
+              "id": "refreshToken",
+              "label": "Refresh token",
+              "type": "secret",
+              "secretPurpose": "token"
+            },
+            {
+              "id": "clientId",
+              "label": "Client ID",
+              "type": "string"
+            },
+            {
+              "id": "clientSecret",
+              "label": "Client secret",
+              "type": "secret",
+              "secretPurpose": "token"
+            }
+          ]
+        },
+        {
           "id": "customDriverOptions",
           "label": "Custom driver options",
           "kind": "custom",
@@ -641,6 +690,55 @@
           {
             "id": "token",
             "label": "Token",
+            "type": "secret",
+            "secretPurpose": "token"
+          }
+        ]
+      },
+      {
+        "id": "accessToken",
+        "label": "Access token",
+        "kind": "token",
+        "secretPurposes": [
+          "token"
+        ],
+        "fields": [
+          {
+            "id": "token",
+            "label": "Token",
+            "type": "secret",
+            "secretPurpose": "token"
+          }
+        ]
+      },
+      {
+        "id": "oauth2",
+        "label": "OAuth 2.0",
+        "kind": "oauth2",
+        "secretPurposes": [
+          "token"
+        ],
+        "fields": [
+          {
+            "id": "accessToken",
+            "label": "Access token",
+            "type": "secret",
+            "secretPurpose": "token"
+          },
+          {
+            "id": "refreshToken",
+            "label": "Refresh token",
+            "type": "secret",
+            "secretPurpose": "token"
+          },
+          {
+            "id": "clientId",
+            "label": "Client ID",
+            "type": "string"
+          },
+          {
+            "id": "clientSecret",
+            "label": "Client secret",
             "type": "secret",
             "secretPurpose": "token"
           }
